@@ -6,3 +6,12 @@ The list of transactions still isn't loading!
 
 *******************************************************
 *******************************************************
+
+
+*******************************************************
+**  BUG REPORT - FIXED  **
+*******************************************************
+The script source files were incomplete for jquery, underscore and backbone.
+The src="../" was missing at the beginning of the source links.
+
+Added the correct script links to the .html file.

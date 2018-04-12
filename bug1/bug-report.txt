@@ -6,3 +6,10 @@ Hey, the list of transactions isn't loading - what gives?!
 
 *******************************************************
 *******************************************************
+
+
+*******************************************************
+**  BUG REPORT - FIXED  **
+*******************************************************
+Unterminiated string literal for variable: var finalHTML = '<div class="buffer">TRANSACTIONS</div>
+Correct termination for the variable is:   var finalHTML = '<div class="buffer">TRANSACTIONS</div>';

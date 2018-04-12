@@ -7,3 +7,15 @@ when hovered over
 
 *******************************************************
 *******************************************************
+
+
+*******************************************************
+**  BUG REPORT - FIXED  **
+*******************************************************
+
+The CSS code for the <div class="new">New</div> was placed 
+inside the .html file instead of the .css file for the .new element style features.  
+Therefore this element was originally only assigned the :hovercolor meaning 
+NO color change could take place when the element was being hovered.
+
+Added correct background color to the .css file.

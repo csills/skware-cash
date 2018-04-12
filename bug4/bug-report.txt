@@ -6,3 +6,18 @@ The transaction filtering is case sensitive. That's annoying!
 
 *******************************************************
 *******************************************************
+
+
+
+*******************************************************
+**  BUG REPORT - FIXED  **
+*******************************************************
+
+In the index.js file:
+The toLowerCase() method was not added to the var searchString in the .search-input function.
+The toLowerCase() method was not added to all of the variable within the .search-input function.
+These variables were: foundInName, foundInFor, foundInDate and foundInAmount.
+
+Addeds the toLowerCase() method to all of the above mentioned variables in the .search-input function:
+
+

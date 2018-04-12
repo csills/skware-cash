@@ -6,3 +6,19 @@ Every row in the transaction list has a weird comma preceding it...
 
 *******************************************************
 *******************************************************
+
+
+
+*******************************************************
+**  BUG REPORT - FIXED  **
+*******************************************************
+
+Line 15 of the index.js file:
+The separator parameter used on the .join() method was incorrect.
+No separator was indicated which by default will return the array separated by commas.
+
+ If separator is an empty string (''),
+ then all elements are joined without any characters in between them.
+
+ Code was corrected to eliminate the unwanted commas:
+ finalHTML += transactionsHTML.join('');

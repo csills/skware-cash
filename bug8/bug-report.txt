@@ -7,3 +7,22 @@ enter key. I thought it was supposed to filter as I type?
 
 *******************************************************
 *******************************************************
+
+
+*******************************************************
+**  BUG REPORT - FIXED  **
+*******************************************************
+
+
+Line 23 of the index.js file:
+The event used to call the .on() method was incorrect.
+The event chosen was .on('change').
+    For select boxes, checkboxes, and radio buttons, the 'change' event is 
+    fired immediately when the user makes a selection with the mouse, 
+    but for the other element types the event is deferred until the element loses focus.
+
+In order for the transaction list to filter as the user is typing,
+the code needs to call the event .on('filter') as shown below:
+
+CORRECTION:     $('.search-input').on('input', function(e) {
+

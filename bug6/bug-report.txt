@@ -6,3 +6,15 @@ The transaction list isn't showing!
 
 *******************************************************
 *******************************************************
+
+
+
+*******************************************************
+**  BUG REPORT - FIXED  **
+*******************************************************
+
+transaction was not being defined in the .map callback function parameter.
+
+added transaction as a parameter to the .map callback in the index.js file.
+
+LINE 4: var transactionsHTML = _.map(transactions, function(transaction) {

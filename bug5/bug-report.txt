@@ -6,3 +6,17 @@ There's no styling on the page at all!
 
 *******************************************************
 *******************************************************
+
+
+
+*******************************************************
+**  BUG REPORT - POSSIBLE FIX  **
+*******************************************************
+
+The css stylesheet was linked incorrectly in the index.html file.
+
+The link provided points to the parent directory which shows two index.html files and no index.css file available at this location per chrome developer tools.
+LINK: <link rel="stylesheet" type="text/css" href="../index.css">
+
+Upon changing the css stylesheet link, the styling on the page appears correctly.
+LINK: <link rel="stylesheet" type="text/css" href="index.css">
